@@ -1,6 +1,6 @@
 # AI Ethics Quiz Application
 
-A responsive, interactive web-based quiz application focused on AI ethics topics with dark/light mode support and progress tracking.
+A responsive, interactive web-based quiz application to learn Topics from the TUM AI-Ethics lecture (ID: SOT87317) with dark/light mode support and progress tracking.
 
 ## Features
 
@@ -24,7 +24,7 @@ A responsive, interactive web-based quiz application focused on AI ethics topics
 
 ### Prerequisites
 
-- A modern web browser (Chrome, Firefox, Safari, Edge)
+- A modern web browser (Chrome, Firefox, Safari, Edge, ...)
 - A local web server (for loading the JSON file)
 
 ### Installation
@@ -59,7 +59,7 @@ tum_quiz/
 
 ## Quiz Content
 
-The quiz covers various topics in AI ethics including:
+The quiz covers various topics from the TUM AI-Ethics lecture (ID: SOT87317) including:
 - Philosophical foundations of ethics
 - Normative ethics approaches (Consequentialism, Deontology, Virtue Ethics)
 - AI bias and fairness
