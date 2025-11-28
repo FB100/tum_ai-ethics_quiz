@@ -24,7 +24,6 @@ A responsive, interactive web-based quiz application to learn Topics from the TU
 
 1. Clone or download the project files
 2. Ensure both `index.html` and `aiEthics.json` are in the same directory
-3. Serve the files using a local web server (due to browser security restrictions on loading local JSON files)
 
 ### Running the Application
 
