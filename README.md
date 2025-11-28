@@ -59,7 +59,9 @@ tum_quiz/
 
 ## Quiz Content
 
-The quiz covers various topics from the TUM AI-Ethics lecture (ID: SOT87317) including:
+The contents of this Quiz are oriented on the contents of the SoSe2025 TUM AI-Ethics lecture (ID: SOT87317).
+
+The quiz covers various topics including:
 - Philosophical foundations of ethics
 - Normative ethics approaches (Consequentialism, Deontology, Virtue Ethics)
 - AI bias and fairness
