@@ -13,19 +13,12 @@ A responsive, interactive web-based quiz application to learn Topics from the TU
 - **Instant Feedback**: Submit answers to see your score and which questions you got right/wrong
 - **Question Sets**: Questions are divided into manageable sets (10 questions per page by default)
 
-## Technologies Used
-
-- HTML5
-- CSS3 (with CSS Variables for theming)
-- Vanilla JavaScript (ES6+)
-- JSON for question data storage
-
 ## Getting Started
 
 ### Prerequisites
 
 - A modern web browser (Chrome, Firefox, Safari, Edge, ...)
-- A local web server (for loading the JSON file)
+- A local web server (Python, NodeJS, ...)
 
 ### Installation
 
