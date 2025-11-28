@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <style>
+        :root {
+            color-scheme: light dark;
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --correct-color: #4caf50;
+            --incorrect-color: #e87171;
+            --progress-bg: #ddd;
+            --progress-fill: #4caf50;
+        }
+
+        body.dark-mode {
+            --bg-color: #121212;
+            --text-color: #ffffff;
+            --correct-color: #76ff03;
+            --incorrect-color: #802424;
+            --progress-bg: #333;
+            --progress-fill: #76ff03;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 150px 0 100px;
+        }
+
+        .topbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            border-bottom: 2px solid #888;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+
+        .topbar h1 {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        .topbar .controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .topbar .controls button {
+            padding: 6px 12px;
+            height: 40px;
+            cursor: pointer;
+        }
+
+        .progressbar-container {
+            position: fixed;
+            top: 50px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            gap: 5px;
+            padding: 5px 10px;
+            background-color: var(--bg-color);
+            z-index: 999;
+            box-sizing: border-box;
+        }
+
+        .progressbar-set {
+            flex: 1;
+            height: 20px;
+            background-color: var(--progress-bg);
+            cursor: pointer;
+            border: 1px solid var(--text-color);
+            position: relative;
+            display: flex;
+        }
+
+        .progressbar-set-fill {
+            height: 100%;
+            transition: width 0.3s ease-in-out;
+        }
+
+        .progressbar-set-fill.correct {
+            background-color: var(--correct-color);
+        }
+
+        .progressbar-set-fill.incorrect {
+            background-color: var(--incorrect-color);
+        }
+
+        .progressbar-set.active {
+            outline: 2px solid var(--text-color);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .question p {
+            font-weight: bold;
+        }
+
+        .result {
+            margin-left: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .correct {
+            background-color: var(--correct-color) !important;
+        }
+
+        .incorrect {
+            background-color: var(--incorrect-color) !important;
+        }
+
+        label {
+            display: block;
+            margin: 3px 0;
+            padding: 2px 4px;
+        }
+
+        .nav-buttons {
+            text-align: center;
+            margin: 30px auto;
+        }
+
+        .nav-buttons button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="topbar">
+    <h1 id="quizTitle">Loading Quiz...</h1>
+    <div class="controls">
+        <button class="submit" onclick="checkAnswers()">Submit Answers</button>
+        <span id="result" class="result"></span>
+        <button id="toggleDarkMode" onclick="toggleDarkMode()">🌓</button>
+    </div>
+</div>
+<div class="progressbar-container" id="progressbars"></div>
+<div class="container">
+    <form id="quizForm"></form>
+    <div class="nav-buttons">
+        <button id="prevBtn" onclick="prevPage()">Previous</button>
+        <button id="nextBtn" onclick="nextPage()">Next</button>
+    </div>
+</div>
+
+<script>
+    let quizData = {}, questionsPerPage = 10, currentPage = 0;
+    const answers = {};
+    let submitted = false;
+
+    async function loadQuestions() {
+        try {
+            const response = await fetch("aiEthics.json");
+            quizData = await response.json();
+            document.getElementById("quizTitle").textContent = quizData.title;
+            document.title = quizData.title;
+            shuffleArray(quizData.questions);
+            quizData.questions.forEach(q => {
+                const indexed = q.options.map((option, index) => ({ option, index }));
+                shuffleArray(indexed);
+                q.shuffledOptions = indexed;
+            });
+            createProgressBars();
+            renderQuestions();
+            updateProgressBars();
+            document.addEventListener("keydown", handleArrowKeys);
+        } catch (error) {
+            document.getElementById("quizForm").innerHTML = "<p>Failed to load questions.</p>";
+            console.error("Error loading questions:", error);
+        }
+    }
+
+    function handleArrowKeys(e) {
+        if (e.key === "ArrowRight") nextPage();
+        if (e.key === "ArrowLeft") prevPage();
+    }
+
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
+    function createProgressBars() {
+        const container = document.getElementById("progressbars");
+        container.innerHTML = "";
+        const setCount = Math.ceil(quizData.questions.length / questionsPerPage);
+        for (let i = 0; i < setCount; i++) {
+            const wrapper = document.createElement("div");
+            wrapper.className = "progressbar-set";
+            wrapper.onclick = () => switchPage(i);
+            wrapper.id = `set-${i}`;
+
+            const correctFill = document.createElement("div");
+            correctFill.className = "progressbar-set-fill correct";
+            correctFill.id = `correct-fill-${i}`;
+            wrapper.appendChild(correctFill);
+
+            const incorrectFill = document.createElement("div");
+            incorrectFill.className = "progressbar-set-fill incorrect";
+            incorrectFill.id = `incorrect-fill-${i}`;
+            wrapper.appendChild(incorrectFill);
+
+            container.appendChild(wrapper);
+        }
+        setActiveBar(currentPage);
+    }
+
+    function setActiveBar(index) {
+        document.querySelectorAll(".progressbar-set").forEach((el, i) => {
+            el.classList.toggle("active", i === index);
+        });
+    }
+
+    function switchPage(pageIndex) {
+        const totalPages = Math.ceil(quizData.questions.length / questionsPerPage);
+        currentPage = Math.max(0, Math.min(pageIndex, totalPages - 1));
+        setActiveBar(currentPage);
+        renderQuestions();
+    }
+
+    function nextPage() {
+        switchPage(currentPage + 1);
+    }
+
+    function prevPage() {
+        switchPage(currentPage - 1);
+    }
+
+    function renderQuestions() {
+        const quizForm = document.getElementById("quizForm");
+        quizForm.innerHTML = "";
+        const start = currentPage * questionsPerPage;
+        const end = Math.min(start + questionsPerPage, quizData.questions.length);
+
+        document.getElementById("prevBtn").disabled = currentPage === 0;
+        document.getElementById("nextBtn").disabled = end >= quizData.questions.length;
+
+        quizData.questions.slice(start, end).forEach((q, i) => {
+            const actualIndex = start + i;
+            const div = document.createElement("div");
+            div.className = "question";
+            div.id = `question${actualIndex}`;
+            const p = document.createElement("p");
+            p.textContent = `${actualIndex + 1}. ${q.q}`;
+            div.appendChild(p);
+
+            q.shuffledOptions.forEach(({ option, index }) => {
+                const label = document.createElement("label");
+                const id = `q${actualIndex}_${index}`;
+                const input = document.createElement("input");
+                input.type = "radio";
+                input.name = `q${actualIndex}`;
+                input.value = index;
+                input.id = id;
+                if (answers[actualIndex] == index) input.checked = true;
+                input.onchange = () => {
+                    answers[actualIndex] = index;
+                    updateProgressBars();
+                };
+                label.appendChild(input);
+                label.append(` ${option}`);
+                label.dataset.index = index;
+                div.appendChild(label);
+            });
+
+            quizForm.appendChild(div);
+
+            if (submitted) {
+                applyFeedback(q, actualIndex);
+            }
+        });
+    }
+
+    function applyFeedback(question, i) {
+        const labels = document.querySelectorAll(`#question${i} label`);
+        labels.forEach(label => {
+            const idx = parseInt(label.dataset.index);
+            const input = label.querySelector("input");
+            if (idx === question.answer) {
+                label.classList.add("correct");
+            } else if (input.checked) {
+                label.classList.add("incorrect");
+            }
+            input.disabled = true;
+        });
+    }
+
+    function updateProgressBars() {
+        const total = quizData.questions.length;
+        const setCount = Math.ceil(total / questionsPerPage);
+        for (let i = 0; i < setCount; i++) {
+            const start = i * questionsPerPage;
+            const end = Math.min(start + questionsPerPage, total);
+            let correct = 0, incorrect = 0, filled = 0;
+            for (let j = start; j < end; j++) {
+                if (answers.hasOwnProperty(j)) {
+                    filled++;
+                    if (submitted) {
+                        if (answers[j] === quizData.questions[j].answer) correct++;
+                        else incorrect++;
+                    }
+                }
+            }
+            const totalSet = end - start;
+            const correctPercent = submitted ? (correct / totalSet) * 100 : (filled / totalSet) * 100;
+            const incorrectPercent = submitted ? (incorrect / totalSet) * 100 : 0;
+
+            const correctBar = document.getElementById(`correct-fill-${i}`);
+            const incorrectBar = document.getElementById(`incorrect-fill-${i}`);
+
+            if (correctBar) correctBar.style.width = `${correctPercent}%`;
+            if (incorrectBar) incorrectBar.style.width = `${incorrectPercent}%`;
+        }
+    }
+
+    function checkAnswers() {
+        submitted = true;
+        let score = 0;
+        quizData.questions.forEach((q, i) => {
+            if (answers[i] === q.answer) score++;
+        });
+        document.getElementById("result").textContent = `Score: ${score} / ${quizData.questions.length}`;
+        updateProgressBars();
+        renderQuestions();
+    }
+
+    function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+    }
+
+    loadQuestions();
+</script>
+</body>
+</html>

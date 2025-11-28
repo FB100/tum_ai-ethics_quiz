@@ -1,0 +1,955 @@
+{
+  "title": "AI Ethics Quiz",
+  "questions": [
+    {
+      "q": "What is not part of practical philosophy?",
+      "options": [
+        "What exists?",
+        "What should I do?",
+        "What is the best means to achieve an end?",
+        "What is the best order of society?"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Which of the following best defines Ethics?",
+      "options": [
+        "Philosophical reflections of existance",
+        "Religious belief system",
+        "Systematic reflection on morality",
+        "Personal opinion about good and bad"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "What distinguishes Ethics from Morality?",
+      "options": [
+        "Morality is broader",
+        "Ethics is culturally determined",
+        "Ethics is the critical analysis of morality",
+        "Morality always uses logical thinking"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Which of these is not one of the three main normative ethics approaches?",
+      "options": [
+        "Consequentialism",
+        "Deontology",
+        "Utilitarianism",
+        "Virtue Ethics"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Which of these is a benefit of AI?",
+      "options": [
+        "Possibility of Deepfakes",
+        "Social Media bots influencing public opinion",
+        "Better pattern recognition in medicine",
+        "Elimination of all jobs"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "What kind of bias can occur due to skewed training data in AI systems?",
+      "options": [
+        "Logical bias",
+        "Trust bias",
+        "Racial bias",
+        "Ontological bias"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "What is the trust bias?",
+      "options": [
+        "People blindly trust AI more than humans",
+        "Humans overestimate AI transparency",
+        "People blindly trust humans more than AI",
+        "Blind trust in technical innovation"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Which philosopher criticized technology for reducing nature to resources?",
+      "options": [
+        "Kant",
+        "Heidegger",
+        "Hume",
+        "Aristotle"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Which organization launched the 'Ethically Aligned Design' initiative?",
+      "options": [
+        "European Commission",
+        "OECD",
+        "IEEE",
+        "AI4People"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Which of the following is not one of AI4People’s core principles?",
+      "options": [
+        "Beneficence",
+        "Justice",
+        "Human agency & oversight",
+        "Explicability"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "What does the Explicability principle ensure?",
+      "options": [
+        "Transparency",
+        "Intelligibility and accountability",
+        "Lack of complexity",
+        "Promoting well-being, preserving dignity, and sustaining the planet"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What is one goal of the OECD AI Principles?",
+      "options": [
+        "Restrict development of unethical AI systems",
+        "Promote universal AI usage",
+        "Ensure fairness, transparency, and accountability",
+        "Certify all AI systems"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Which requirement is part of the European Commission's trustworthy AI guidelines?",
+      "options": [
+        "Autonomy",
+        "Central governance",
+        "Human agency and oversight",
+        "Autonomous decision-making without checks"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Which level represents fully autonomous vehicles (AVs)?",
+      "options": [
+        "Level 0",
+        "Level 3",
+        "Level 10",
+        "Level 5"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Which ethical theory focuses on minimizing harm and maximizing well-being in AV decisions?",
+      "options": [
+        "Deontology",
+        "Virtue Ethics",
+        "Utilitarianism",
+        "Meta-ethics"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "What is a key concern of AI in healthcare?",
+      "options": [
+        "Shortage of patient data",
+        "Reliability and privacy issues",
+        "Heidegger’s critique of technology",
+        "Complexity"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "In military AI applications, what is the risk of lethal autonomy?",
+      "options": [
+        "Dehumanization of War",
+        "System bugs making deadly decisions",
+        "Faster decision-making",
+        "Restricted deployment"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What does ontology study?",
+      "options": [
+        "The meaning of life",
+        "The nature of existence",
+        "The best form of government",
+        "Assumptions behind normative Ethics"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Which type of ethics asks 'How do different people perceive ethics?'",
+      "options": [
+        "Normative Ethics",
+        "Meta-Ethics",
+        "Descriptive Ethics",
+        "Practical Ethics"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Which ethical approach focuses on character traits like fairness or respect?",
+      "options": [
+        "Deontology",
+        "Utilitarianism",
+        "Virtue Ethics",
+        "Contractarianism"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Which of these is a core element of Consequentialism?",
+      "options": [
+        "Rules",
+        "Outcome",
+        "Intent",
+        "Virtue"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Which of these is a core element of Deontology?",
+      "options": [
+        "Rules",
+        "Outcome",
+        "Intent",
+        "Virtue"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "According to the Harm Principle, Power can be rightfully be exercised, to prevent what type of harm?",
+      "options": [
+        "Harm to others and self harm",
+        "Harm to others and economic harm",
+        "Only Harm to others",
+        "Harm to others, self harm and economic harm"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "What is the main idea of Negative Liberty?",
+      "options": [
+        "Freedom from interference",
+        "Freedom to act upon ones free will",
+        "Freedom of life",
+        "Freedom to act unethically"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "What is the main idea of Positive Liberty?",
+      "options": [
+        "Freedom from interference",
+        "Freedom to act upon ones free will",
+        "Freedom of life",
+        "Freedom to act unethically"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What is an example of Narrow AI?",
+      "options": [
+        "All of these",
+        "A self-driving car that adapts to new laws",
+        "A chess-playing AI",
+        "A sentient robot"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "What is the main concern with black-box algorithms?",
+      "options": [
+        "Storage limitation",
+        "Vulnerability against Cyberattacks",
+        "Unintelligibility",
+        "Increased bias"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Which concept is violated when people cannot question how an AI made a decision?",
+      "options": [
+        "Privacy",
+        "Trust Bias",
+        "Accountability",
+        "Harm principle"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Which principle ensures humans retain final control in AI decisions?",
+      "options": [
+        "Technical robustness",
+        "Human agency & oversight",
+        "Explicability",
+        "Autonomy"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What does 'capability caution' mean in AI ethics?",
+      "options": [
+        "Avoiding giving AI certain capabilities",
+        "Caution against over-promising AI abilities",
+        "Limiting AI to known domains",
+        "Preventing AI from learning new things"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What is a unique advantage of AI in education on taboo topics?",
+      "options": [
+        "Positive Liberty",
+        "Automatic homework grading",
+        "Impartial, shame-free communication",
+        "Replacing teachers"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "What is a ethical benefit of using AI in healthcare simulations?",
+      "options": [
+        "Better Explanations",
+        "No risk to real patients",
+        "Greater patient satisfaction",
+        "Faster discharge"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Which project developed a normative framework for AI in health?",
+      "options": [
+        "Melissa Project",
+        "ANDRE Project",
+        "ProtenSGM",
+        "IEEE Health AI"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "What is one ethical concern in military AI use?",
+      "options": [
+        "Processing speed",
+        "Decreased public trust in military",
+        "Dehumanization of War",
+        "Enviromental damage"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "What approach does the ANDRE project use for AV decision-making?",
+      "options": [
+        "Strict Utilitarianism",
+        "Risk-weighted ethical switching",
+        "Human override",
+        "Traffic-law only mode"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Which ethical theory asserts that the morality of an action depends solely on its consequences?",
+      "options": [
+        "Deontology",
+        "Virtue Ethics",
+        "Consequentialism",
+        "Meta-Ethics"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "What is the term for AI systems making decisions in ways that humans cannot interpret?",
+      "options": [
+        "Algorithmic transparency",
+        "Explainability",
+        "Algorithmic opacity",
+        "Ethical uncertainty"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "What is the name for trusting human judgment over superior AI decisions?",
+      "options": [
+        "Human preference bias",
+        "Algorithm aversion",
+        "Trust bias",
+        "Expertise illusion"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Which framework includes the principles of Beneficence, Non-maleficence, Autonomy, Justice, and Explicability?",
+      "options": [
+        "OECD Principles",
+        "AI4People",
+        "IEEE Ethically Aligned Design",
+        "European Commission Ethics"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What ethical level focuses on questioning what 'good' or 'bad' means?",
+      "options": [
+        "Meta-Ethics",
+        "Normative Ethics",
+        "Descriptive Ethics",
+        "Applied Ethics"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "What is the goal of ECPAIS?",
+      "options": [
+        "Developing an AI for Healthcare",
+        "To standardize legal frameworks for AI",
+        "To certify AI systems",
+        "To promote open-source AI"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "What is the focus of the alignAI Doctoral Research Network?",
+      "options": [
+        "Developing new AI hardware",
+        "Aligning Large Language Models (LLMs) with human values",
+        "Analyzing the ethics of Healcare AIs",
+        "Studying the history of AI"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Which of the following is not a case study discussed in the Course?",
+      "options": [
+        "The Tesla Autopilot",
+        "The Ford Pinto",
+        "The movie 'The verdict'",
+        "The Google DeepMind Project"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "What does the term 'morality' refer to?",
+      "options": [
+        "The existent, observable human behavior according to principles, norms, and rules of a society",
+        "The study of ancient Greek philosophy",
+        "The difference between humans and AI systems",
+        "An objective awnser to questions of good and bad"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "What are the three reflection levels of ethics?",
+      "options": [
+        "Descriptive, Normative, Meta-ethics",
+        "Individual, Institutional, Universal",
+        "Consequentialism, Deontology, Virtue Ethics",
+        "Positive, Negative, Procedural"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "What is the central idea of utilitarianism?",
+      "options": [
+        "Actions are right if they follow universal laws",
+        "Actions are right if they promote the greatest happiness for the greatest number of people",
+        "Actions are right if they align with individual virtues",
+        "Actions are right if they minimize harm to others"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "According to deontological ethics, what determines the rightness of an action?",
+      "options": [
+        "The consequences of the action",
+        "The adherence to rules or duties",
+        "The intentions of the person performing the action",
+        "The cultural context of the action"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What does meta-ethics primarily examine?",
+      "options": [
+        "The practical application of ethical principles",
+        "The assumptions and language behind normative ethics",
+        "The historical development of human rights",
+        "The economic impact of ethical decisions"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What is the main focus of applied ethics?",
+      "options": [
+        "Theoretical debates about morality",
+        "Reflection on the nature of ethical language",
+        "Addressing concrete ethical problems in specific fields",
+        "Historical analysis of ethical systems"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "According to Kant, what is the 'Categorical Imperative'?",
+      "options": [
+        "An action is right if it promotes happiness",
+        "Act only according to maxims that could become universal laws",
+        "The ends justify the means",
+        "Ethics are relative to cultural context"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What is the primary difference between positive and negative liberty?",
+      "options": [
+        "Positive liberty focuses on freedom from interference, while negative liberty focuses on the capacity to act",
+        "Positive liberty involves active government intervention, while negative liberty involves freedom from external restraint",
+        "Positive liberty is about individual rights, while negative liberty is about collective rights",
+        "Positive liberty is a deontological concept, while negative liberty is a consequentialist concept"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What is the main challenge for normative ethics?",
+      "options": [
+        "Describing existing moral behaviors",
+        "Justifying ethical principles and values",
+        "Analyzing the language of morality",
+        "Comparing different cultural norms"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "In the context of AI, what would descriptive ethics examine?",
+      "options": [
+        "How AI should be programmed to follow ethical rules",
+        "How stakeholders perceive the fairness of AI systems",
+        "The universal principles of AI ethics",
+        "The philosophical foundations of AI morality"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What are the two methods to solve scarcity problems?",
+      "options": [
+        "Distribution and Allocation",
+        "Cooperation and Competition",
+        "Sharing and Defending",
+        "Autarky and Trade"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "According to Adam Smith, what drives individuals to provide goods and services?",
+      "options": [
+        "Benevolence",
+        "Self-interest",
+        "Government mandates",
+        "Ethical obligations"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What distinguishes Narrow AI from General AI?",
+      "options": [
+        "Narrow AI is proactive, while General AI is task-specific",
+        "Narrow AI is tailored to specific tasks, while General AI can perform a wide range of tasks autonomously",
+        "Narrow AI is based on human intuition, while General AI relies on data",
+        "Narrow AI is more ethical than General AI"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What is the Turing Test used to evaluate?",
+      "options": [
+        "The physical strength of a robot",
+        "The ability of a machine to exhibit human-like intelligence",
+        "The speed of an AI system's calculations",
+        "The ethical principles embedded in an AI system"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What is a major implication of unethical institutions, acording to the lecture?",
+      "options": [
+        "They always lead to economic growth",
+        "They restrict freedoms and reduce economic incentives",
+        "They promote innovation and technological advancement",
+        "They ensure equal distribution of resources"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What is the primary focus of institutional ethics?",
+      "options": [
+        "Individual moral judgments",
+        "Procedures and principles that set the framework for actions",
+        "Cultural relativism",
+        "The historical development of ethical systems"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Which of the following is NOT a general feature of AI?",
+      "options": [
+        "Automated Decision Making",
+        "Algorithmic Opacity",
+        "Data Dependency",
+        "Complete Transparency"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "What is the 'Black Box Phenomenon' in the context of AI?",
+      "options": [
+        "A system where inputs and outputs are visible, but the inner workings are transparent",
+        "A system where inputs go in and outputs come out, but the inner workings are unclear",
+        "A system designed specifically for entertainment purposes",
+        "A system that takes over in case of emergency"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What is a key ethical concern related to AI's 'Algorithmic Opacity'?",
+      "options": [
+        "It makes AI systems too slow",
+        "It hinders accountability and fairness due to incomprehensible decision-making processes",
+        "It ensures complete transparency in all AI operations",
+        "It eliminates the need for human oversight"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What is the main implication of the racial bias found in health prediction algorithms?",
+      "options": [
+        "AI systems are inherently racist",
+        "The calibration of target variables is crucial to avoid biases",
+        "AI should not be used in healthcare",
+        "Bias in AI is impossible to eliminate"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Which principle of AI4People emphasizes promoting well-being, preserving dignity, and sustaining the planet?",
+      "options": [
+        "Non-maleficence",
+        "Autonomy",
+        "Beneficence",
+        "Justice"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "What does the term 'Enframing' ('Gestell') refer to in Heidegger's philosophy?",
+      "options": [
+        "A framework for ethical AI development",
+        "The objectifying that reduces beings to measurable resources",
+        "A method for improving AI transparency",
+        "A tool for enhancing human creativity"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Which of the following is an example of AI's potential positive impact on human rights?",
+      "options": [
+        "AI-driven diagnosis tools improving healthcare access",
+        "AI systems replacing all human jobs",
+        "AI eliminating the need for legal systems",
+        "AI enforcing strict surveillance regimes"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "What is the ethical concern regarding data input for AI systems?",
+      "options": [
+        "Data input is always accurate and unbiased",
+        "Certain types of data (e.g., biometric) can pose human rights risks",
+        "AI systems do not require data input to function",
+        "Data input has no ethical implications"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What was the primary ethical issue with Amazon's hiring software (2014–2017)?",
+      "options": [
+        "Age discrimination",
+        "Gender discrimination",
+        "Racial bias",
+        "Disability bias"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What is a key challenge of AI in HR?",
+      "options": [
+        "Lack of data availability",
+        "Training data often being biased",
+        "Over-reliance on human judgment",
+        "High costs of implementation"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Which principle prohibits distinguishing based on personal features in unavoidable accident scenarios for autonomous vehicles?",
+      "options": [
+        "Rule 9 of German National Ethics Commission",
+        "OECD Principle 17",
+        "AI4People's Justice Principle",
+        "IEEE's Transparency Guideline"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "What was Oslo's achievement using big data, as mentioned in the Lecture?",
+      "options": [
+        "Reduced street lighting energy consumption by 62%",
+        "Reduced traffic accidents by 32%",
+        "Achieved 97% renewable energy usage",
+        "Reduced crime rates by 54%"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "What is a major ethical concern regarding care robots?",
+      "options": [
+        "They are too expensive to deploy",
+        "They may compromise human dignity in certain contexts",
+        "They require excessive maintenance",
+        "They cannot perform tasks as well as humans"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What is the primary economic rationale for companies to adopt ethical AI practices?",
+      "options": [
+        "To eliminate competition entirely",
+        "To improve risk management and customer satisfaction",
+        "To reduce employee salaries",
+        "To avoid all government regulations"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What is a major ethical risk of generative AI in healthcare?",
+      "options": [
+        "Over-reliance on human judgment",
+        "Privacy breaches of sensitive health data",
+        "Reduced accuracy in diagnostics",
+        "Limited availability of training data"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Which of the following is a goal of the MELISSA project?",
+      "options": [
+        "Developing autonomous military drones",
+        "Creating AI-powered diabetes management solutions",
+        "Replacing human surgeons with robots",
+        "Proposing a legal Framework for ethical AI"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What is a key ethical concern regarding military AI technologies?",
+      "options": [
+        "Increased human oversight",
+        "Moral deskilling of military personnel",
+        "Reduced computational efficiency",
+        "Limited deployment scenarios"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "How can AI contribute to sustainability?",
+      "options": [
+        "By replacing all human labor in agriculture",
+        "By optimizing recycling processes with AI-powered robots",
+        "By eliminating the need for environmental regulations",
+        "By reducing data privacy concerns"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What is a possible approach to address shortcomings in AI ethics, we discussed in the lecture?",
+      "options": [
+        "Eliminating corporate involvement in AI development",
+        "Community-in-the-loop participation and mutual rule-setting",
+        "Focusing solely on technical solutions",
+        "Avoiding all legal regulations"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Which Approach to Ethics does Kant symbolize",
+      "options": [
+        "Epistemology",
+        "Virtue Ethics",
+        "Consequentialism",
+        "Deontology"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Which principle is NOT part of the integrated ethical approach for AVs proposed by ANDRE?",
+      "options": [
+        "Utilitarianism",
+        "Deontology",
+        "Risk ethics",
+        "Moral relativism"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "What does the Moral Machine Experiment investigate?",
+      "options": [
+        "Public preferences in AV moral dilemmas",
+        "Technical performance of AVs",
+        "Ethical bias of AVs",
+        "Effectiveness of legal frameworks for AVs"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Which ethical theory would prioritize adhering to moral rules like traffic laws in AV decision-making?",
+      "options": [
+        "Utilitarianism",
+        "Deontology",
+        "Virtue Ethics",
+        "Descriptive Ethics"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Which of the following is a critical limitation of deontological ethics in AV decision-making?",
+      "options": [
+        "Inability to handle unexpected traffic scenarios",
+        "Potential clashes between moral norms when consequences are ignored",
+        "Over-reliance on public opinion data",
+        "Excessive computational complexity"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What is not a step in ANDREs proposed decision making process?",
+      "options": [
+        "Calculation of valence-adjusted consequences",
+        "Exclusion of prohibited trajectories",
+        "Typification of hazard",
+        "Selection of final trajectory"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "What societal preference was revealed by the Moral Machine Experiment but poses ethical challenges for AV programming?",
+      "options": [
+        "Prioritizing emergency vehicles",
+        "Protecting the elderly over children",
+        "Sacrificing pedestrians who jaywalk",
+        "Favoring the fit and wealthy over vulnerable groups"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "What is the primary purpose of the 'conditional override option' recommended for AVs up to Level 3 automation?",
+      "options": [
+        "To allow passengers to customize driving styles",
+        "To ensure human drivers can regain control when needed",
+        "To enable remote takeover by law enforcement",
+        "To bypass traffic laws"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What is a key difference between SAE Levels 3 and 4 automation?",
+      "options": [
+        "Level 4 requires no human intervention, while Level 3 may request it",
+        "Level 3 operates only on highways, while Level 4 works in cities",
+        "Level 4 uses deontological and utilitarian ethics, while Level 3 uses only deontology",
+        "Level 3 is fully electric, while Level 4 supports combustion engines"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Under SAE, which of the following scenarios would still classify a vehicle as Level 2 despite advanced capabilities?",
+      "options": [
+        "The vehicle navigates urban traffic autonomously but requires driver confirmation at roundabouts.",
+        "The vehicle controls steering, acceleration, and braking simultaneously but expects the driver to monitor the environment at all times.",
+        "The vehicle operates driverlessly only in geofenced areas",
+        "The vehicle makes ethical decisions in crash scenarios but cannot operate without a human occupant."
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Kant's Categorical Imperative requires that actions:",
+      "options": [
+        "Maximize happiness for the greatest number",
+        "Follow divine commandments",
+        "Could be universally applied as a law",
+        "Align with cultural traditions"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Which AI4People principle requires balancing human and AI decision-making?",
+      "options": [
+        "Beneficence",
+        "Autonomy",
+        "Justice",
+        "Explicability"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Adam Smith's quote about butchers and bakers illustrates:",
+      "options": [
+        "The need for government regulation",
+        "Self-interest driving collective benefit",
+        "The superiority of veganism",
+        "Religious foundations of morality"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "The Golden Rule is an example of:",
+      "options": [
+        "Cultural relativism",
+        "Universalism",
+        "Descriptive ethics",
+        "Virtue ethics"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "AI fairness debates often pit utilitarianism against:",
+      "options": [
+        "Kantian principles",
+        "Moral nihilism",
+        "Technological determinism",
+        "Existentialism"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Tesla's 2016 statement about autonomous crashes emphasized:",
+      "options": [
+        "Corporate responsibility",
+        "Customer accountability",
+        "Government liability",
+        "Algorithmic infallibility"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What does the 'Principle of Maat' state:",
+      "options": [
+        "That which you hate to be done to you, do not do to another",
+        "Do to others what you want them to do to you",
+        "Do what brings the biggest benefit to the most people",
+        "Act only according to that maxim whereby you can at the sametime will that it should become a universal law"
+      ],
+      "answer": 0
+    }
+  ]
+}
